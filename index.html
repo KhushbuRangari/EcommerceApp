@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Carausal Link  -->
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Ecommerce</title>
+  </head>
+  <body onload="loadCategory()">
+    
+    <nav class="navbar navbar-expand-lg bg-dark text-white ">
+        <div class="container-fluid ">
+          <a class="navbar-brand" href="#"> <img src="images/logo.jpg" alt=" Electronic Shop" style="width: 100px; height: 100px;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="#"> <button onclick="fetchData()" style="border: none;background-color: #212529; color: #0d6efd;"> Products</button></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+               
+                </ul>
+         
+             
+          
+              </li>
+          </ul>
+            <form class="d-flex">
+              <input class="form-control me-2"  id="inputText"  type="search" placeholder="Search" aria-label="Search" onchange="">
+              <button class="btn btn-outline-success"type="submit" >Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <ul class="list-group list-group-horizontal " id="list1" style="width: 80%;margin-left: 10%;margin-top: 30px;display: flex; flex-wrap: wrap; align-items: center;">
+    
+      
+      </ul>
+
+      <div class="prd"></div>
+
+       <!-- Portfolio Section -->
+
+  <section id="portfolio" class="portfolio-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">My Projects</h2>
+      <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card">
+                  <img
+                    src="https://img.freepik.com/free-vector/colourful-illustration-programmer-working_23-2148281410.jpg?w=740&t=st=1687616475~exp=1687617075~hmac=f846239451c8e743c9f42072a8c9c432bfb2b0d7e9ed8a0983365bbef4b85ae3"
+                    class="card-img-top" alt="Project 1">
+                  <div class="card-body">
+                    <h5 class="card-title">Project 1</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img
+                    src="https://img.freepik.com/free-vector/colourful-illustration-programmer-working_23-2148281410.jpg?w=740&t=st=1687616475~exp=1687617075~hmac=f846239451c8e743c9f42072a8c9c432bfb2b0d7e9ed8a0983365bbef4b85ae3"
+                    class="card-img-top" alt="Project 2">
+                  <div class="card-body">
+                    <h5 class="card-title">Project 2</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img
+                    src="https://img.freepik.com/free-vector/colourful-illustration-programmer-working_23-2148281410.jpg?w=740&t=st=1687616475~exp=1687617075~hmac=f846239451c8e743c9f42072a8c9c432bfb2b0d7e9ed8a0983365bbef4b85ae3"
+                    class="card-img-top" alt="Project 3">
+                  <div class="card-body">
+                    <h5 class="card-title">Project 3</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card">
+                  <img
+                    src="https://img.freepik.com/free-vector/colourful-illustration-programmer-working_23-2148281410.jpg?w=740&t=st=1687616475~exp=1687617075~hmac=f846239451c8e743c9f42072a8c9c432bfb2b0d7e9ed8a0983365bbef4b85ae3"
+                    class="card-img-top" alt="Project 4">
+                  <div class="card-body">
+                    <h5 class="card-title">Project 4</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img
+                    src="https://img.freepik.com/free-vector/colourful-illustration-programmer-working_23-2148281410.jpg?w=740&t=st=1687616475~exp=1687617075~hmac=f846239451c8e743c9f42072a8c9c432bfb2b0d7e9ed8a0983365bbef4b85ae3"
+                    class="card-img-top" alt="Project 5">
+                  <div class="card-body">
+                    <h5 class="card-title">Project 5</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img
+                    src="https://img.freepik.com/free-vector/colourful-illustration-programmer-working_23-2148281410.jpg?w=740&t=st=1687616475~exp=1687617075~hmac=f846239451c8e743c9f42072a8c9c432bfb2b0d7e9ed8a0983365bbef4b85ae3"
+                    class="card-img-top" alt="Project 6">
+                  <div class="card-body">
+                    <h5 class="card-title">Project 6</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+      <div class="mainPagetext"><p>🛒 Welcome to our Electronic Shop – Your One-Stop Tech Destination! 🎉
+
+        At our eCommerce website, we take pride in offering the latest and greatest in electronic gadgets and gizmos. Whether you're a tech-savvy enthusiast or a casual user, our wide range of high-quality products caters to everyone's needs. 💻📱🔌
+        
+        🔍 Browse through our carefully curated collection of smartphones, laptops, tablets, smartwatches, cameras, and other electronic marvels. We've partnered with top-notch brands to ensure you get the best value for your money. 💡
+        
+        ⚡️ Embrace the power of innovation with cutting-edge technology and experience seamless performance in every device you choose. From top-notch processors to stunning displays, we've got it all covered. 💪
+        
+        🌟 With our user-friendly interface, you can easily compare products, read detailed specifications, and make informed decisions. We believe in providing a hassle-free shopping experience, backed by secure payment options and reliable delivery services. 🚚💳
+        
+        💬 Our customer support team is always at your service to answer any queries or provide assistance. Your satisfaction is our top priority, and we strive to make your shopping journey smooth and enjoyable. 🤝
+        
+        🎁 Plus, keep an eye out for exciting deals, seasonal offers, and exclusive promotions – we love surprising our customers with great discounts! 💸
+        
+        🏆 Join our ever-growing community of tech enthusiasts and stay updated on the latest trends and product launches. Experience the joy of shopping for electronics like never before! 💻🛍️
+        
+        👉 Visit our Electronic Shop today and unlock a world of possibilities with the latest technology. Embrace innovation and elevate your electronic experience! 🚀</p></div>
+
+
+ 
+<script src="ecom.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

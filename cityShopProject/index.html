@@ -1,46 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Commerce App</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
-    <!-- ****Font Awesome Link**** -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Commerce App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <!-- ****Font Awesome Link**** -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 
-  </head>
-  <body>
-    <header class="header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+</head>
+
+<body>
+  <header class="header">
+    <a class="visually-hidden-focusable" name="top" href="#content"></a>
+    <nav class="navbar navbar-expand-lg " id="nav">
       <div class="container-fluid">
         <!-- Logo -->
         <a class="navbar-brand" href="#">
-          <img
-            src="images/logo.png"
-            alt="Logo"
-            width="80px"
-            height="80px"
-            class="d-inline-block align-text-top"
-          /></a
-        >
+          <img src="images/logo.png" alt="Logo" width="80px" height="80px" class="d-inline-block align-text-top" /></a>
 
         <!-- Navbar Toggler for mobile -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style=" background-color: rgb(245, 170, 73);"></span>
         </button>
 
         <!-- Navbar items -->
@@ -48,28 +33,19 @@
           <ul class="navbar-nav">
             <!-- Home -->
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link text-white" href="#">Home</a>
             </li>
             <!-- Products -->
             <li class="nav-item">
-              <a class="nav-link" href="#">Products</a>
+              <a class="nav-link text-white" href="#">Products</a>
             </li>
             <!-- Categories with Dropdown -->
             <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdownCategories"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownCategories" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
                 Categories
               </a>
-              <ul
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdownCategories"
-              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategories">
                 <li><a class="dropdown-item" href="#">Smartphones</a></li>
 
                 <li><a class="dropdown-item" href="#">Laptops</a></li>
@@ -87,19 +63,14 @@
 
         <!-- Search and Cart buttons -->
         <form class="d-flex" >
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <input class="form-control me-2"  type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn" id="btn-search" type="submit">Search</button>
           <!-- *****CART****** -->
-      
-            <button class="btn btn-outline-primary ms-2 " id="cart-btn"  type="button">
-              <i class="fa fa-shopping-cart"  style='font-size:22px'>Cart</i>
-            </button>
-        
+
+          <button class="btn  ms-2 " id="cart-btn" type="button">
+            <i class="fa fa-shopping-cart" style='font-size:22px'>Cart</i>
+          </button>
+
         </form>
       </div>
     </nav>
@@ -108,65 +79,200 @@
         <i class="fa fa-trash"></i>
         <img src="" alt="product">
         <div class="content">
-            <h3>product name 1</h3>
-            <span class="price">$4.99/-</span>
-            <span class="quantity">Qty : 1</span>
+          <h3>product name 1</h3>
+          <span class="price">$4.99/-</span>
+          <span class="quantity">Qty : 1</span>
         </div>
       </div>
       <div class="box">
         <i class="fa fa-trash"></i>
         <img src="" alt="product">
         <div class="content">
-            <h3>product name 2</h3>
-            <span class="price">$4.99/-</span>
-            <span class="quantity">Qty : 1</span>
+          <h3>product name 2</h3>
+          <span class="price">$4.99/-</span>
+          <span class="quantity">Qty : 1</span>
         </div>
       </div>
       <div class="box">
         <i class="fa fa-trash"></i>
         <img src="" alt="product">
         <div class="content">
-            <h3>product name 3</h3>
-            <span class="price">$4.99/-</span>
-            <span class="quantity">Qty : 1</span>
+          <h3>product name 3</h3>
+          <span class="price">$4.99/-</span>
+          <span class="quantity">Qty : 1</span>
         </div>
       </div>
-   
+
       <div class="total">total : $10:00/-</div>
       <a href="" class="btn">Checkout</a>
     </div>
-  </header>
+
     <!-- Home Section -->
+  <!--------------->
+  <div class="container-fluid"  style="padding: 0;">
+    <div class="row" > <!-- carausel Section -->
+      <div class="col"  style="padding-left: 0;">
+        <section id="carousel" class="carousel-section ">
+          <div class="container-fluid">
+            <!-- <h2 class="text-center mb-4">My Projects</h2> -->
+            <div id="pCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row ">
+                    <div class="col">
+                      <!-- <div class="card"> -->
+                        <img src="images/banner1.jpg" id="bannerImg" alt="Project 1">
 
-    <!-- Products Section -->
+                          <div class="cityshopText"> 
+                             <img src="images/cityShop text.png" style="width: 200px;height: 160px;" alt="">
 
-    <!-- Catrgories Section -->
+                             <ul  class="social-icons"> 
+                              <li > <a class="	fa fa-facebook "style='font-size:24px' href=""></a></li>
+                              <li > <a class="fa fa-instagram" style='font-size:24px' href=""></a></li>
+                            </ul>
+                          
+                          </div>
+                          
 
-    <!-- Products Section -->
+                      <!-- </div> -->
+                    </div>
 
-    <!-- Your website content goes here -->
-
-    <!-- Footer Section -->
-    <footer class="footer mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <!-- Add any additional footer content or links here -->
+                  </div>
                 </div>
-                <div class="col-md-6 text-center">
-                    <p>&copy; 2023 Your Website. All rights reserved.</p>
+                <div class="carousel-item">
+                  <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="images/card1.jpg"
+                          class="card-img-top" alt="Project 4">
+                        <!-- <div class="card-body">
+                          <h5 class="card-title">Project 4</h5>
+                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div> -->
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="images/card2.jpg"
+                          class="card-img-top" alt="Project 5">
+                        <!-- <div class="card-body">
+                          <h5 class="card-title">Project 5</h5>
+                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div> -->
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img
+                          src="images/card1.jpg"
+                          class="card-img-top" alt="Project 6">
+                        <!-- <div class="card-body">
+                          <h5 class="card-title">Project 6</h5>
+                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#pCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#pCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-        </div>
-    </footer>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col">
+        <p class="mainPagetext" style="justify-content: center;">🛒 Welcome to our Electronic Shop – Your One-Stop Tech
+          Destination! 🎉
 
-    <!-- Add your JavaScript and other scripts here -->
-    <script src="cityShop.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://use.fontawesome.com/c73437d96d.js"></script>
-  </body>
+          At our eCommerce website, we take pride in offering the latest and greatest in electronic gadgets and gizmos.
+          Whether you're a tech-savvy enthusiast or a casual user, our wide range of high-quality products caters to
+          everyone's needs. 💻📱🔌
+
+          🔍 Browse through our carefully curated collection of smartphones, laptops, tablets, smartwatches, cameras,
+          and other electronic marvels. We've partnered with top-notch brands to ensure you get the best value for your
+          money. 💡
+
+          ⚡️ Embrace the power of innovation with cutting-edge technology and experience seamless performance in every
+          device you choose. From top-notch processors to stunning displays, we've got it all covered. 💪
+
+          🌟 With our user-friendly interface, you can easily compare products, read detailed specifications, and make
+          informed decisions. We believe in providing a hassle-free shopping experience, backed by secure payment
+          options and reliable delivery services. 🚚💳
+
+          💬 Our customer support team is always at your service to answer any queries or provide assistance. Your
+          satisfaction is our top priority, and we strive to make your shopping journey smooth and enjoyable. 🤝
+
+          🎁 Plus, keep an eye out for exciting deals, seasonal offers, and exclusive promotions – we love surprising
+          our customers with great discounts! 💸
+
+          🏆 Join our ever-growing community of tech enthusiasts and stay updated on the latest trends and product
+          launches. Experience the joy of shopping for electronics like never before! 💻🛍️
+
+          👉 Visit our Electronic Shop today and unlock a world of possibilities with the latest technology. Embrace
+          innovation and elevate your electronic experience! 🚀
+        </p>
+      </div>
+
+    </div> -->
+    <!-- <div class="row">
+      <div class="col">
+        <ul class="list-group list-group-horizontal " id="list1"
+          style="width: 80%;margin-left: 10%;margin-top: 30px;display: flex; flex-wrap: wrap; align-items: center;">
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+
+      </div>
+    </div> -->
+  </div>
+  </header>
+  
+
+  <!-- Products Section -->
+
+  <!-- Catrgories Section -->
+
+  <!-- Products Section -->
+
+  <!-- Your website content goes here -->
+
+  <!-- Footer Section -->
+  <footer class="footer mt-5">
+    <div class="container-fluid text-center">
+      <div class="row">
+        <div class="col-12 " id="backToTop">
+          <!-- Add any additional footer content or links here -->
+          <a href="#top">Back to Top</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-white text-center my-3">
+          <p>&copy; 2023 Your Website. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Add your JavaScript and other scripts here -->
+  <script src="cityShop.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/c73437d96d.js"></script>
+</body>
+
 </html>

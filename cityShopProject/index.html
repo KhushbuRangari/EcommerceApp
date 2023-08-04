@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body onload="getData()">
   <header class="header">
     <a class="visually-hidden-focusable" name="top" href="#content"></a>
     <nav class="navbar navbar-expand-lg " id="nav">
@@ -37,24 +37,16 @@
             </li>
             <!-- Products -->
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Products</a>
+              <a class="nav-link text-white" href="#" onclick="fetchproducts()">Products</a>
             </li>
             <!-- Categories with Dropdown -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownCategories" role="button"
+              <a class="nav-link dropdown-toggle text-white" onclick="loadCategory()" href="#" id="navbarDropdownCategories" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Categories
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategories">
                 <li><a class="dropdown-item" href="#">Smartphones</a></li>
-
-                <li><a class="dropdown-item" href="#">Laptops</a></li>
-
-                <li><a class="dropdown-item" href="#">Mobiles</a></li>
-
-                <li><a class="dropdown-item" href="#">Books</a></li>
-
-                <li><a class="dropdown-item" href="#">Garments</a></li>
                 <!-- Add more categories as needed -->
               </ul>
             </li>
@@ -74,6 +66,8 @@
         </form>
       </div>
     </nav>
+
+ 
     <div class="shopping-cart">
       <div class="box">
         <i class="fa fa-trash"></i>
@@ -106,16 +100,15 @@
       <div class="total">total : $10:00/-</div>
       <a href="" class="btn">Checkout</a>
     </div>
-
+  </header>
     <!-- Home Section -->
   <!--------------->
-  <div class="container-fluid"  style="padding: 0;">
+  <div class="content">
+
+  <div class="container-fluid" id="carousel1" style="padding: 0;">
     <div class="row" > <!-- carausel Section -->
-      <div class="col"  style="padding-left: 0;">
-        <section id="carousel" class="carousel-section ">
-          <div class="container-fluid">
-            <!-- <h2 class="text-center mb-4">My Projects</h2> -->
-            <div id="pCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="col"   style="padding-left: 0;">
+         <div id="pCarousel" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div class="row ">
@@ -126,7 +119,7 @@
                           <div class="cityshopText"> 
                              <img src="images/cityShop text.png" style="width: 200px;height: 160px;" alt="">
 
-                             <ul  class="social-icons"> 
+                             <ul  class="social-icons" id="socialaLink"> 
                               <li > <a class="	fa fa-facebook "style='font-size:24px' href=""></a></li>
                               <li > <a class="fa fa-instagram" style='font-size:24px' href=""></a></li>
                             </ul>
@@ -142,7 +135,7 @@
                 <div class="carousel-item">
                   <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
-                      <div class="card">
+                      <div class="card" id="card1">
                         <img
                           src="images/card1.jpg"
                           class="card-img-top" alt="Project 4">
@@ -153,7 +146,7 @@
                       </div>
                     </div>
                     <div class="col">
-                      <div class="card">
+                      <div class="card" id="card1">
                         <img
                           src="images/card2.jpg"
                           class="card-img-top" alt="Project 5">
@@ -164,7 +157,7 @@
                       </div>
                     </div>
                     <div class="col">
-                      <div class="card">
+                      <div class="card" id="card1">
                         <img
                           src="images/card1.jpg"
                           class="card-img-top" alt="Project 6">
@@ -186,45 +179,11 @@
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
-          </div>
-        </section>
+        
       </div>
     </div>
-    <!-- <div class="row">
-      <div class="col">
-        <p class="mainPagetext" style="justify-content: center;">🛒 Welcome to our Electronic Shop – Your One-Stop Tech
-          Destination! 🎉
 
-          At our eCommerce website, we take pride in offering the latest and greatest in electronic gadgets and gizmos.
-          Whether you're a tech-savvy enthusiast or a casual user, our wide range of high-quality products caters to
-          everyone's needs. 💻📱🔌
-
-          🔍 Browse through our carefully curated collection of smartphones, laptops, tablets, smartwatches, cameras,
-          and other electronic marvels. We've partnered with top-notch brands to ensure you get the best value for your
-          money. 💡
-
-          ⚡️ Embrace the power of innovation with cutting-edge technology and experience seamless performance in every
-          device you choose. From top-notch processors to stunning displays, we've got it all covered. 💪
-
-          🌟 With our user-friendly interface, you can easily compare products, read detailed specifications, and make
-          informed decisions. We believe in providing a hassle-free shopping experience, backed by secure payment
-          options and reliable delivery services. 🚚💳
-
-          💬 Our customer support team is always at your service to answer any queries or provide assistance. Your
-          satisfaction is our top priority, and we strive to make your shopping journey smooth and enjoyable. 🤝
-
-          🎁 Plus, keep an eye out for exciting deals, seasonal offers, and exclusive promotions – we love surprising
-          our customers with great discounts! 💸
-
-          🏆 Join our ever-growing community of tech enthusiasts and stay updated on the latest trends and product
-          launches. Experience the joy of shopping for electronics like never before! 💻🛍️
-
-          👉 Visit our Electronic Shop today and unlock a world of possibilities with the latest technology. Embrace
-          innovation and elevate your electronic experience! 🚀
-        </p>
-      </div>
-
-    </div> -->
+   
     <!-- <div class="row">
       <div class="col">
         <ul class="list-group list-group-horizontal " id="list1"
@@ -232,17 +191,46 @@
         </ul>
       </div>
     </div>
-
+-->
     <div class="row">
       <div class="col">
-
+        <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
-    </div> -->
+    </div> 
   </div>
-  </header>
+       <!-- Products Section -->
+       <div class="row">
+        <div class="col">
+          <ul class="list-group list-group-horizontal " id="list1">
+          </ul>
+        </div>
+      </div>
+</div>
+ 
   
 
   <!-- Products Section -->
+
 
   <!-- Catrgories Section -->
 
@@ -251,7 +239,7 @@
   <!-- Your website content goes here -->
 
   <!-- Footer Section -->
-  <footer class="footer mt-5">
+  <footer class="footer navbar-fixed-bottom">
     <div class="container-fluid text-center">
       <div class="row">
         <div class="col-12 " id="backToTop">

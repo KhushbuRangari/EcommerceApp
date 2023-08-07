@@ -41,14 +41,13 @@
             </li>
             <!-- Categories with Dropdown -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" onclick="loadCategory()" href="#" id="navbarDropdownCategories" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Categories
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategories">
-                <li><a class="dropdown-item" href="#">Smartphones</a></li>
-                <!-- Add more categories as needed -->
-              </ul>
+              <!-- <label class="input-group-text" for="inputGroupSelect01">Categories</label>
+               -->
+              <select class="custom-select" id="inputGroupSelect01" onchange="selectOption()" style="margin-top: 12px;">
+                <!-- <li><a class="dropdown-item" href="#">Smartphones</a></li> -->
+                <option selected="selected" class="dropdown-item" value="choose..." >Categories</option>
+              
+              </select>
             </li>
           </ul>
         </div>
@@ -207,14 +206,22 @@
           </ul>
         </div>
       </div>
+
+      <!-- Catrgories Section -->
+      <div class="row">
+        <div class="col">
+          <ul class="list-group list-group-horizontal " id="categoryProduct">
+          </ul>
+        </div>
+      </div>
+
+
 </div>
  
   
 
-  <!-- Products Section -->
+  
 
-
-  <!-- Catrgories Section -->
 
   <!-- Products Section -->
 
